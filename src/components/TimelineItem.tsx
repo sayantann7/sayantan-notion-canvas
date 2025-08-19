@@ -10,6 +10,10 @@ interface TimelineItemProps {
 export const TimelineItem = ({ title, company, period, description }: TimelineItemProps) => {
   return (
     <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
       whileHover={{ backgroundColor: 'hsl(var(--notion-hover))' }}
       className="flex gap-4 p-4 rounded-lg transition-all duration-150"
     >

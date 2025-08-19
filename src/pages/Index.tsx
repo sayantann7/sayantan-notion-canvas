@@ -74,16 +74,17 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background font-inter">
+    <div id="home" className="min-h-screen bg-background">
       {/* Hero Section */}
       <AnimatedSection className="max-w-4xl mx-auto px-6 pt-20 pb-section">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h1 className="text-5xl font-bold text-foreground mb-4 leading-tight">
-            Sayantan Nandi
+            👋 Welcome to Sayantan's Space
           </h1>
           <h2 className="text-2xl text-notion-gray mb-6 font-medium">
             AI/ML Engineer | Full Stack Developer | AI-Native Builder
@@ -132,7 +133,8 @@ const Index = () => {
 
       {/* About Me */}
       <AnimatedSection delay={0.1} className="max-w-4xl mx-auto px-6 pb-section">
-        <h2 className="text-3xl font-bold text-foreground mb-8">About Me</h2>
+        <div id="about" />
+        <h2 className="text-3xl font-bold text-foreground mb-8">About Me 🧭</h2>
         <NotionBlock>
           <p className="text-foreground leading-relaxed text-lg">
             I'm an AI/ML Engineer and Full Stack Developer passionate about building AI-native applications. From reinforcement learning agents mastering Pacman to large-scale RAG pipelines and AI interview platforms, I love experimenting with cutting-edge AI systems. My goal is to reimagine how humans and AI collaborate — through conversational search, multi-agent systems, and AI-native developer experiences.
@@ -141,16 +143,18 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Projects */}
-      <AnimatedSection delay={0.2} className="max-w-4xl mx-auto px-6 pb-section">
-        <h2 className="text-3xl font-bold text-foreground mb-8">Projects</h2>
-        <div className="space-y-2">
+  <AnimatedSection delay={0.2} className="max-w-4xl mx-auto px-6 pb-section">
+        <div id="projects" />
+        <h2 className="text-3xl font-bold text-foreground mb-8">Projects 🛠️</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
+      className="h-full"
             >
               <ProjectCard {...project} />
             </motion.div>
@@ -160,7 +164,8 @@ const Index = () => {
 
       {/* Experience & Education */}
       <AnimatedSection delay={0.3} className="max-w-4xl mx-auto px-6 pb-section">
-        <h2 className="text-3xl font-bold text-foreground mb-8">Experience & Education</h2>
+        <div id="experience" />
+        <h2 className="text-3xl font-bold text-foreground mb-8">Experience 🎓</h2>
         <div className="space-y-2">
           <TimelineItem
             title="Full Stack Developer"
@@ -182,7 +187,8 @@ const Index = () => {
 
       {/* Certifications */}
       <AnimatedSection delay={0.4} className="max-w-4xl mx-auto px-6 pb-section">
-        <h2 className="text-3xl font-bold text-foreground mb-8">Certifications</h2>
+        <div id="certifications" />
+        <h2 className="text-3xl font-bold text-foreground mb-8">Certifications 💰</h2>
         <div className="flex flex-wrap gap-3">
           <CertificationPill name="AI Engineer Path" provider="Scrimba" />
           <CertificationPill name="TensorFlow on Google Cloud" provider="Google" />
@@ -193,15 +199,16 @@ const Index = () => {
 
       {/* Blog / Content */}
       <AnimatedSection delay={0.5} className="max-w-4xl mx-auto px-6 pb-section">
-        <h2 className="text-3xl font-bold text-foreground mb-8">Blog / Content</h2>
+        <div id="blog" />
+        <h2 className="text-3xl font-bold text-foreground mb-8">Blog 📝</h2>
         <div className="space-y-2">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.4, delay: index * 0.06 }}
             >
               <ProjectCard {...post} />
             </motion.div>
@@ -209,9 +216,59 @@ const Index = () => {
         </div>
       </AnimatedSection>
 
+      {/* Testimonials */}
+      <AnimatedSection delay={0.55} className="max-w-4xl mx-auto px-6 pb-section">
+        <div id="testimonials" />
+        <h2 className="text-3xl font-bold text-foreground mb-8">Testimonials 💬</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            {
+              quote:
+                "Sayantan delivers clean, production-ready code fast. His eye for detail and UX elevates every project.",
+              author: "Aarav K.",
+              role: "Founder, Pluto Labs",
+            },
+            {
+              quote:
+                "A rare blend of AI depth and full‑stack pragmatism. He anticipates edge cases and ships reliably.",
+              author: "Maya S.",
+              role: "PM, NexVest",
+            },
+            {
+              quote:
+                "Great collaborator—clear communication, thoughtful reviews, and solid architecture decisions.",
+              author: "Dev R.",
+              role: "Senior Engineer",
+            },
+            {
+              quote:
+                "Turned a vague idea into a polished MVP with delightful UX. Highly recommend.",
+              author: "Priya M.",
+              role: "Product Lead",
+            },
+          ].map((t, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.35, delay: i * 0.05 }}
+            >
+              <NotionBlock className="bg-card/30 border border-border/50">
+                <p className="text-sm text-notion-gray leading-relaxed">“{t.quote}”</p>
+                <div className="mt-3 text-sm text-foreground/80 font-medium">
+                  {t.author} · <span className="text-notion-gray">{t.role}</span>
+                </div>
+              </NotionBlock>
+            </motion.div>
+          ))}
+        </div>
+      </AnimatedSection>
+
       {/* Contact */}
       <AnimatedSection delay={0.6} className="max-w-4xl mx-auto px-6 pb-20">
-        <h2 className="text-3xl font-bold text-foreground mb-8">Contact</h2>
+        <div id="contact" />
+        <h2 className="text-3xl font-bold text-foreground mb-8">Contact 🚀</h2>
         <NotionBlock>
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.a

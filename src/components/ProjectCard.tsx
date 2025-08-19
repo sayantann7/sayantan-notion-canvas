@@ -30,6 +30,10 @@ export const ProjectCard = ({ title, description, link, github, video, type }: P
 
   return (
     <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
       whileHover={{ backgroundColor: 'hsl(var(--notion-hover))' }}
       className="group rounded-lg p-4 transition-all duration-150 cursor-pointer border border-transparent hover:border-border"
       onClick={() => getLink() && window.open(getLink(), '_blank')}

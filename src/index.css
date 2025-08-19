@@ -1,3 +1,47 @@
+/* Plus Jakarta Sans font faces */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('/fonts/PlusJakartaSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html, body {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+  h1, h2, h3 {
+    font-weight: 800; /* Use ExtraBold for headings */
+  }
+}
+
+/* Utilities */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+html { scroll-behavior: smooth; }
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('/fonts/PlusJakartaSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Only italic light file is present; this will be used when text is italic + font-light */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('/fonts/PlusJakartaSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +53,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Dark Notion-inspired color system (default) */
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 84% 5.9%;
     --foreground: 210 40% 98%;
     
     --card: 222.2 84% 4.9%;
@@ -44,7 +88,7 @@ All colors MUST be HSL.
     --notion-light-gray: 217.2 32.6% 17.5%;
     --notion-blue: 217.2 32.6% 17.5%;
     --notion-blue-text: 212.7 26.8% 83.9%;
-    --notion-hover: 217.2 32.6% 20%;
+    --notion-hover: 217.2 30.6% 12%;
     
     /* Spacing tokens */
     --section-spacing: 6rem;
@@ -58,62 +102,5 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .light {
-    /* Light mode colors */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
-    
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
-    
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    
-    --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 9%;
-    
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    
-    --accent: 216 87% 95%;
-    --accent-foreground: 222 47% 11%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 9%;
-    
-    /* Custom light Notion-style tokens */
-    --notion-gray: 0 0% 45%;
-    --notion-light-gray: 0 0% 96%;
-    --notion-blue: 216 87% 95%;
-    --notion-blue-text: 222 47% 11%;
-    --notion-hover: 0 0% 98%;
-    
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
   }
 }

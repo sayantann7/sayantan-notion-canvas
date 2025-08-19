@@ -17,10 +17,11 @@ export default {
 				'2xl': '1400px'
 			}
 		},
-		extend: {
+			extend: {
 			fontFamily: {
-				'inter': ['Inter', 'system-ui', 'sans-serif'],
-				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				// Use Plus Jakarta Sans across the app; keep 'inter' alias for existing classes
+				'inter': ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+				'sans': ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -95,15 +96,7 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
-			},
-			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-up': 'slide-up 0.6s ease-out',
-			},
-			keyframes: {
+				},
 				'fade-in': {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
@@ -113,6 +106,13 @@ export default {
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-up': 'slide-up 0.6s ease-out',
+			},
+
 			spacing: {
 				'section': 'var(--section-spacing)',
 				'block': 'var(--block-spacing)',

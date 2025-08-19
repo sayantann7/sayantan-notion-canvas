@@ -76,7 +76,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background font-inter">
       {/* Hero Section */}
-      <AnimatedSection className="max-w-4xl mx-auto px-6 pt-20 pb-section" id="home">
+      <AnimatedSection className="max-w-4xl mx-auto px-6 pt-20 pb-section">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ const Index = () => {
       </AnimatedSection>
 
       {/* About Me */}
-      <AnimatedSection delay={0.1} className="max-w-4xl mx-auto px-6 pb-section" id="about">
+      <AnimatedSection delay={0.1} className="max-w-4xl mx-auto px-6 pb-section">
         <h2 className="text-3xl font-bold text-foreground mb-8">About Me</h2>
         <NotionBlock>
           <p className="text-foreground leading-relaxed text-lg">
@@ -141,7 +141,7 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Projects */}
-      <AnimatedSection delay={0.2} className="max-w-4xl mx-auto px-6 pb-section" id="projects">
+      <AnimatedSection delay={0.2} className="max-w-4xl mx-auto px-6 pb-section">
         <h2 className="text-3xl font-bold text-foreground mb-8">Projects</h2>
         <div className="space-y-2">
           {projects.map((project, index) => (
@@ -159,10 +159,8 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Experience & Education */}
-      <AnimatedSection delay={0.3} className="max-w-4xl mx-auto px-6 pb-section" id="experience">
-        <h2 className="text-3xl font-bold text-foreground mb-8">
-          Experience & <span id="education">Education</span>
-        </h2>
+      <AnimatedSection delay={0.3} className="max-w-4xl mx-auto px-6 pb-section">
+        <h2 className="text-3xl font-bold text-foreground mb-8">Experience & Education</h2>
         <div className="space-y-2">
           <TimelineItem
             title="Full Stack Developer"
@@ -183,7 +181,7 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Certifications */}
-      <AnimatedSection delay={0.4} className="max-w-4xl mx-auto px-6 pb-section" id="certifications">
+      <AnimatedSection delay={0.4} className="max-w-4xl mx-auto px-6 pb-section">
         <h2 className="text-3xl font-bold text-foreground mb-8">Certifications</h2>
         <div className="flex flex-wrap gap-3">
           <CertificationPill name="AI Engineer Path" provider="Scrimba" />
@@ -194,7 +192,7 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Blog / Content */}
-      <AnimatedSection delay={0.5} className="max-w-4xl mx-auto px-6 pb-section" id="blog">
+      <AnimatedSection delay={0.5} className="max-w-4xl mx-auto px-6 pb-section">
         <h2 className="text-3xl font-bold text-foreground mb-8">Blog / Content</h2>
         <div className="space-y-2">
           {blogPosts.map((post, index) => (
@@ -212,7 +210,7 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Contact */}
-      <AnimatedSection delay={0.6} className="max-w-4xl mx-auto px-6 pb-20" id="contact">
+      <AnimatedSection delay={0.6} className="max-w-4xl mx-auto px-6 pb-20">
         <h2 className="text-3xl font-bold text-foreground mb-8">Contact</h2>
         <NotionBlock>
           <div className="flex flex-col sm:flex-row gap-4">

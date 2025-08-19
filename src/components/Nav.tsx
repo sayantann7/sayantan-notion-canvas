@@ -9,7 +9,7 @@ const navItems: NavItem[] = [
   { id: "experience", label: "Experience", emoji: "🎓" },
   { id: "certifications", label: "Certs", emoji: "💰" },
   { id: "blog", label: "Blog", emoji: "📝" },
-  { id: "testimonials", label: "Testimonials", emoji: "💬" },
+//   { id: "testimonials", label: "Testimonials", emoji: "💬" },
   { id: "contact", label: "Contact", emoji: "🚀" },
 ];
 
@@ -28,7 +28,7 @@ export function FloatingSideNav({ className }: { className?: string }) {
       aria-label="Section navigation"
     >
       <div className="flex flex-col gap-3 p-2 rounded-3xl bg-background border border-white/10 shadow-2xl backdrop-blur-xl">
-        {navItems.map((item) => (
+    {navItems.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
@@ -36,8 +36,8 @@ export function FloatingSideNav({ className }: { className?: string }) {
               e.preventDefault();
               scrollToId(item.id);
             }}
-            className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center shadow-md hover:bg-white/20 transition-colors"
-            title={item.label}
+      className="w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center shadow-md hover:bg-white/20 transition-colors"
+      aria-label={item.label}
           >
             <span className="text-xl leading-none select-none">{item.emoji}</span>
           </a>
@@ -57,7 +57,7 @@ export function MobileTopBar({ className }: { className?: string }) {
       aria-label="Section navigation"
     >
       <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
-        {navItems.map((item) => (
+    {navItems.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
@@ -65,8 +65,8 @@ export function MobileTopBar({ className }: { className?: string }) {
               e.preventDefault();
               scrollToId(item.id);
             }}
-            className="shrink-0 w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shadow-md hover:bg-white/20 transition-colors"
-            title={item.label}
+      className="shrink-0 w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shadow-md hover:bg-white/20 transition-colors"
+      aria-label={item.label}
           >
             <span className="text-lg leading-none select-none">{item.emoji}</span>
           </a>

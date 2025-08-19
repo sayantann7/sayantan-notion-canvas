@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Youtube, Mail, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Youtube, Mail, Download, Twitter } from 'lucide-react';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import { NotionBlock } from '@/components/NotionBlock';
 import { ProjectCard } from '@/components/ProjectCard';
@@ -12,43 +12,67 @@ const Index = () => {
       title: "AI Document Chat App (LLM + RAG Prototype)",
       description: "Built an intelligent document chat system using Large Language Models and Retrieval-Augmented Generation to enable natural language queries over document collections.",
       type: "github" as const,
-      github: "https://github.com"
+      github: "https://github.com/sayantann7/gpt-oss-ai-document-chat"
     },
     {
       title: "Prepr – AI Interview Platform",
       description: "Developed an AI-powered interview platform that conducts realistic technical interviews and provides detailed feedback to help candidates improve their skills.",
       type: "github" as const,
-      github: "https://github.com"
+      github: "https://github.com/sayantann7/prepr"
     },
     {
       title: "Tensor Protocol Newsletter",
       description: "Created a technical newsletter covering the latest developments in AI/ML, distributed to thousands of subscribers interested in cutting-edge research.",
       type: "article" as const,
-      link: "https://example.com"
+      link: "https://github.com/sayantann7/exclusive-list-launchpad"
+    },
+    {
+      title: "Vercel Clone",
+      description: "Built a clone of Vercel's platform, enabling seamless deployment and hosting of web applications with a focus on simplicity.",
+      type: "github" as const,
+      github: "https://github.com/sayantann7/vercel-clone"
+    },
+    {
+      title: "Bolt Clone",
+      description: "Built a clone of Bolt where users can prompt and create websites using natural language.",
+      type: "github" as const,
+      github: "https://github.com/sayantann7/bolt.clone"
     },
     {
       title: "Student Resources Hub",
-      description: "Built a comprehensive platform aggregating academic resources, study materials, and tools to help students succeed in their coursework.",
+      description: "Compiled a list of 150+ Free AI tools, resources, and guides to help students navigate their academic journey.",
       type: "github" as const,
-      github: "https://github.com"
+      github: "https://github.com/sayantann7/student-resources"
+    },
+    {
+      title: "AutoForms",
+      description: "A fun version of filling forms using natural language processing instead of traditional form inputs.",
+      type: "github" as const,
+      github: "https://github.com/sayantann7/autoforms-frontend"
     },
     {
       title: "Pacman RL Agent",
       description: "Implemented a reinforcement learning agent that masters the classic Pacman game using Q-learning and deep neural networks.",
       type: "github" as const,
-      github: "https://github.com"
+      github: "https://github.com/sayantann7/DCQN_Learning_for_Pac_Man"
     },
     {
-      title: "Lunar Lander RL Agent",
-      description: "Trained an intelligent agent to successfully land spacecraft using reinforcement learning algorithms and physics simulation.",
+      title: "Yes Securities Sales Repository",
+      description: "Developed a Android+iOS application for managing the documents of the Yes Securities Sales Team.",
       type: "github" as const,
-      github: "https://github.com"
+      github: "https://github.com/sayantann7/yes-securities-repo"
     },
     {
-      title: "YSL Sales Repository",
-      description: "Developed a comprehensive sales tracking and analytics system for retail operations with real-time insights and reporting.",
+      title: "Placement Predictor",
+      description: "Built a Random Forest regression model to predict student placement outcomes based on various features.",
       type: "github" as const,
-      github: "https://github.com"
+      github: "https://github.com/sayantann7/placement-predictor"
+    },
+    {
+      title: "Web3 Wallet",
+      description: "Developed a simple Web3 wallet for managing digital assets and interacting with decentralized applications.",
+      type: "github" as const,
+      github: "https://github.com/sayantann7/sage-web3-wallet"
     }
   ];
 
@@ -87,17 +111,17 @@ const Index = () => {
             👋 Welcome to Sayantan's Space
           </h1>
           <h2 className="text-2xl text-notion-gray mb-6 font-medium">
-            AI/ML Engineer | Full Stack Developer | AI-Native Builder
+            Full Stack Developer | AI Engineer | Cloud Engineer
           </h2>
-          <p className="text-lg text-notion-gray leading-relaxed mb-8 max-w-2xl">
-            I build AI-native apps, train intelligent agents, and create tools that bridge research and real-world impact.
+          <p className="text-lg text-notion-gray leading-relaxed mb-8 max-w-3xl">
+            I build and scale production-grade websites over the weekend, AI-native apps, train intelligent agents, and create stuff that can grow humanity more than the universe.
           </p>
           
           <div className="flex gap-4">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/sayantann7"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
@@ -108,7 +132,7 @@ const Index = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://github.com"
+              href="https://github.com/sayantann7"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
@@ -119,13 +143,34 @@ const Index = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://youtube.com"
+              href="https://youtube.com/@sayantann7"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
             >
               <Youtube className="w-4 h-4" />
               YouTube
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://twitter.com/sayantann7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
+            >
+              <Twitter className="w-4 h-4" />
+              Twitter
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="/sayantan-nandi-resume.pdf"
+              download
+              className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              Download Resume
             </motion.a>
           </div>
         </motion.div>
@@ -137,7 +182,7 @@ const Index = () => {
         <h2 className="text-3xl font-bold text-foreground mb-8">About Me 🧭</h2>
         <NotionBlock>
           <p className="text-foreground leading-relaxed text-lg">
-            I'm an AI/ML Engineer and Full Stack Developer passionate about building AI-native applications. From reinforcement learning agents mastering Pacman to large-scale RAG pipelines and AI interview platforms, I love experimenting with cutting-edge AI systems. My goal is to reimagine how humans and AI collaborate — through conversational search, multi-agent systems, and AI-native developer experiences.
+            A student driven by curiosity and a passion for building solutions that create real-world impact, my core focus lies in full-stack web development, where I enjoy turning ideas into scalable and user-friendly applications. Alongside this, I’m expanding my expertise in AI/ML and exploring the potential of cloud technologies such as AWS and Google Cloud to power modern, intelligent systems.
           </p>
         </NotionBlock>
       </AnimatedSection>
@@ -173,13 +218,28 @@ const Index = () => {
             period="Jun 2025 – Present"
           />
           <TimelineItem
+            title="Technical Executive"
+            company="CodeX"
+            period="Aug 2025 – Present"
+          />
+          <TimelineItem
+            title="AI/ML Coordinator"
+            company="Google Developer Students Club"
+            period="Jul 2025 – Present"
+          />
+          <TimelineItem
+            title="Blockchain CoHead"
+            company="Cyber Blockchain Club"
+            period="Jul 2025 – Present"
+          />
+          <TimelineItem
             title="Full Stack Developer"
             company="NexVest"
             period="Apr 2025 – Jun 2025"
           />
           <TimelineItem
             title="B.Tech Computer Science & Engineering"
-            company="Symbiosis Institute of Technology"
+            company="Symbiosis Institute of Technology, Pune"
             period="2024 – 2028"
           />
         </div>
@@ -189,11 +249,13 @@ const Index = () => {
       <AnimatedSection delay={0.4} className="max-w-4xl mx-auto px-6 pb-section">
         <div id="certifications" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Certifications 💰</h2>
-        <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-4">
           <CertificationPill name="AI Engineer Path" provider="Scrimba" />
           <CertificationPill name="TensorFlow on Google Cloud" provider="Google" />
           <CertificationPill name="AI A-Z: Agentic AI, Gen AI, RL" provider="Udemy" />
-          <CertificationPill name="MCP (Intro + Advanced)" provider="Anthropic" />
+          <CertificationPill name="Hashgraph Developer Course" provider="Hashgraph Association" />
+          <CertificationPill name="AWS APAC Solutions Architect Job Silumation" provider="AWS" />
+          <CertificationPill name="Introduction to MCP" provider="Anthropic" />
         </div>
       </AnimatedSection>
 
@@ -217,10 +279,20 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Testimonials */}
-      <AnimatedSection delay={0.55} className="max-w-4xl mx-auto px-6 pb-section">
+      {/* <AnimatedSection delay={0.55} className="max-w-4xl mx-auto px-6 pb-section">
         <div id="testimonials" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Testimonials 💬</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="/resume.pdf"
+              download
+              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors bg-primary text-primary-foreground hover:bg-foreground/90"
+            >
+              <Download className="w-4 h-4" />
+              Download Resume
+            </motion.a>
           {[
             {
               quote:
@@ -263,7 +335,7 @@ const Index = () => {
             </motion.div>
           ))}
         </div>
-      </AnimatedSection>
+      </AnimatedSection> */}
 
       {/* Contact */}
       <AnimatedSection delay={0.6} className="max-w-4xl mx-auto px-6 pb-20">
@@ -274,16 +346,16 @@ const Index = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="mailto:sayantan@example.com"
+              href="mailto:sayantannandi13@gmail.com"
               className="flex items-center gap-2 px-4 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
             >
               <Mail className="w-4 h-4" />
-              sayantan@example.com
+              sayantannandi13@gmail.com
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/sayantann7"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"

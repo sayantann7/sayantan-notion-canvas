@@ -5,6 +5,7 @@ import { NotionBlock } from '@/components/NotionBlock';
 import { ProjectCard } from '@/components/ProjectCard';
 import { TimelineItem } from '@/components/TimelineItem';
 import { CertificationPill } from '@/components/CertificationPill';
+import { SkillPill } from '@/components/SkillPill';
 
 const Index = () => {
   const projects = [
@@ -12,68 +13,83 @@ const Index = () => {
       title: "AI Document Chat App (LLM + RAG Prototype)",
       description: "Built an intelligent document chat system using Large Language Models and Retrieval-Augmented Generation to enable natural language queries over document collections.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/gpt-oss-ai-document-chat"
+      github: "https://github.com/sayantann7/gpt-oss-ai-document-chat",
+      skills: ["TypeScript", "React", "Node.js", "HuggingFace.js", "LLM", "RAG", "Vector DB"]
     },
     {
       title: "Prepr – AI Interview Platform",
       description: "Developed an AI-powered interview platform that conducts realistic technical interviews and provides detailed feedback to help candidates improve their skills.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/prepr"
+      github: "https://github.com/sayantann7/prepr",
+      skills: ["TypeScript", "Next.js", "React", "Node.js", "PostgreSQL","Vapi AI"]
     },
     {
       title: "Tensor Protocol Newsletter",
-      description: "Created a technical newsletter covering the latest developments in AI/ML, distributed to thousands of subscribers interested in cutting-edge research.",
-      type: "article" as const,
-      link: "https://github.com/sayantann7/exclusive-list-launchpad"
+      description: "Created a technical newsletter with 5,300+ subscribers covering the latest developments in AI/ML.",
+      type: "github" as const,
+      link: "https://github.com/sayantann7/exclusive-list-launchpad",
+      skills: ["TypeScript", "React", "Supabase"]
     },
     {
       title: "Vercel Clone",
       description: "Built a clone of Vercel's platform, enabling seamless deployment and hosting of web applications with a focus on simplicity.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/vercel-clone"
+      github: "https://github.com/sayantann7/vercel-clone",
+      skills: ["Cloudfare R2", "VM", "Redis", "TypeScript", "Next.js", "Tailwind CSS"]
     },
     {
       title: "Bolt Clone",
       description: "Built a clone of Bolt where users can prompt and create websites using natural language.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/bolt.clone"
+      github: "https://github.com/sayantann7/bolt.clone",
+      skills: ["TypeScript", "React", "OpenAI API", "Web Containers", "Tailwind CSS"]
     },
     {
       title: "Student Resources Hub",
       description: "Compiled a list of 150+ Free AI tools, resources, and guides to help students navigate their academic journey.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/student-resources"
+      github: "https://github.com/sayantann7/student-resources",
+      skills: ["TypeScript", "React", "Tailwind CSS"]
     },
     {
       title: "AutoForms",
       description: "A fun version of filling forms using natural language processing instead of traditional form inputs.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/autoforms-frontend"
+      github: "https://github.com/sayantann7/autoforms-frontend",
+      skills: ["TypeScript", "React", "OpenAI API", "NLP", "Express"]
     },
     {
       title: "Pacman RL Agent",
       description: "Implemented a reinforcement learning agent that masters the classic Pacman game using Q-learning and deep neural networks.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/DCQN_Learning_for_Pac_Man"
+      github: "https://github.com/sayantann7/DCQN_Learning_for_Pac_Man",
+      skills: ["Python", "Tensorflow", "OpenAI Gym", "Reinforcement Learning"]
     },
     {
       title: "Yes Securities Sales Repository",
       description: "Developed a Android+iOS application for managing the documents of the Yes Securities Sales Team.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/yes-securities-repo"
+      github: "https://github.com/sayantann7/yes-securities-repo",
+      skills: ["React Native", "Expo", "AWS S3", "TypeScript"]
     },
     {
       title: "Placement Predictor",
       description: "Built a Random Forest regression model to predict student placement outcomes based on various features.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/placement-predictor"
+      github: "https://github.com/sayantann7/placement-predictor",
+      skills: ["Python", "scikit-learn", "Pandas"]
     },
     {
       title: "Web3 Wallet",
       description: "Developed a simple Web3 wallet for managing digital assets and interacting with decentralized applications.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/sage-web3-wallet"
+      github: "https://github.com/sayantann7/sage-web3-wallet",
+      skills: ["TypeScript", "React", "Web3.js", "Solana"]
     }
+  ];
+
+  const allSkills = [
+    "JavaScript","TypeScript","React","HTML","CSS","Python","Next.js","Node.js","PostgreSQL","MongoDB","Google Cloud","DigitalOcean","Firebase","TensorFlow","Terraform","Prisma","Vercel","Supabase","Figma","Canva","After Effects","Stack Overflow","Postman","Vite","C","Linux"
   ];
 
   const blogPosts = [
@@ -81,19 +97,25 @@ const Index = () => {
       title: "Exploring GPT OSS (OpenAI's OSS Model)",
       description: "Deep dive into OpenAI's open-source models, comparing capabilities and exploring practical applications in real-world scenarios.",
       type: "video" as const,
-      video: "https://youtube.com"
+      video: "https://youtu.be/QmvlbYnnkuI?si=m2A64p90lIoeGsQx"
     },
     {
-      title: "Google's A2A (Agent-to-Agent Protocol) Explained",
-      description: "Comprehensive breakdown of Google's Agent-to-Agent communication protocol and its implications for multi-agent AI systems.",
+      title: "AWS Crash Course for Beginners",
+      description: "Comprehensive breakdown of AWS services (EC2, VPC, Security Groups, IAM) and their applications in cloud computing.",
       type: "video" as const,
-      video: "https://youtube.com"
+      video: "https://youtu.be/1Dcq6dy7hRw?si=uw5sewmnrJOjWTnj"
     },
     {
       title: "Neural Networks: Theory + Practical Guide",
       description: "Complete guide covering neural network fundamentals from mathematical foundations to hands-on implementation tutorials.",
       type: "article" as const,
-      link: "https://example.com"
+      link: "https://youtu.be/5KbSmguIjEY?si=SB9GYz3pKY04bFx1"
+    },
+    {
+      title: "Google's A2A (Agent-to-Agent Protocol) Explained",
+      description: "Comprehensive breakdown of Google's Agent-to-Agent communication protocol and its implications for multi-agent AI systems.",
+      type: "video" as const,
+      video: "https://youtu.be/srvxkAztYVU?si=RO85VObNRcTQyAgQ"
     }
   ];
 
@@ -166,14 +188,25 @@ const Index = () => {
       </AnimatedSection>
 
       {/* About Me */}
-      <AnimatedSection delay={0.1} className="max-w-4xl mx-auto px-6 pb-section">
-        <div id="about" />
+      <AnimatedSection id="about" delay={0.1} className="max-w-4xl mx-auto px-6 pb-section">
+        <div />
         <h2 className="text-3xl font-bold text-foreground mb-8">About Me 🧭</h2>
         <NotionBlock>
           <p className="text-foreground leading-relaxed text-lg">
             A student driven by curiosity and a passion for building solutions that create real-world impact, my core focus lies in full-stack web development, where I enjoy turning ideas into scalable and user-friendly applications. Alongside this, I’m expanding my expertise in AI/ML and exploring the potential of cloud technologies such as AWS and Google Cloud to power modern, intelligent systems.
           </p>
         </NotionBlock>
+      </AnimatedSection>
+
+      {/* Skills */}
+      <AnimatedSection id="skills" className="max-w-4xl mx-auto px-6 pb-section">
+        <div />
+        <h2 className="text-3xl font-bold text-foreground mb-8">Skills 🧰</h2>
+        <div className="flex flex-wrap gap-2">
+          {allSkills.map((skill) => (
+            <SkillPill key={skill} name={skill} />
+          ))}
+        </div>
       </AnimatedSection>
 
       {/* Projects */}
@@ -245,9 +278,9 @@ const Index = () => {
       <AnimatedSection delay={0.5} className="max-w-4xl mx-auto px-6 pb-section">
         <div id="blog" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Blog 📝</h2>
-        <div className="space-y-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {blogPosts.map((post) => (
-            <div key={post.title}>
+            <div key={post.title} className="h-full">
               <ProjectCard {...post} />
             </div>
           ))}
@@ -255,52 +288,19 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Testimonials */}
-      {/* <AnimatedSection delay={0.55} className="max-w-4xl mx-auto px-6 pb-section">
+      <AnimatedSection delay={0.55} className="max-w-4xl mx-auto px-6 pb-section">
         <div id="testimonials" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Testimonials 💬</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="/resume.pdf"
-              download
-              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors bg-primary text-primary-foreground hover:bg-foreground/90"
-            >
-              <Download className="w-4 h-4" />
-              Download Resume
-            </motion.a>
           {[
             {
-              quote:
-                "Sayantan delivers clean, production-ready code fast. His eye for detail and UX elevates every project.",
-              author: "Aarav K.",
-              role: "Founder, Pluto Labs",
-            },
-            {
-              quote:
-                "A rare blend of AI depth and full‑stack pragmatism. He anticipates edge cases and ships reliably.",
-              author: "Maya S.",
-              role: "PM, NexVest",
-            },
-            {
-              quote:
-                "Great collaborator—clear communication, thoughtful reviews, and solid architecture decisions.",
-              author: "Dev R.",
-              role: "Senior Engineer",
-            },
-            {
-              quote:
-                "Turned a vague idea into a polished MVP with delightful UX. Highly recommend.",
-              author: "Priya M.",
-              role: "Product Lead",
+              quote:"I really enjoyed working with Sayantan on our web development project. He wasn’t just reliable in delivering everything we asked for he actually took the initiative to suggest better ways of doing things and added new features that made the project even stronger. His creativity and dedication truly stood out, and he went beyond what was expected. I’d definitely recommend Sayantan to anyone looking for someone skilled and proactive who cares about the success of the project.",
+              author: "Yashwant Sagnati",
+              role: "Founder, NexVest",
             },
           ].map((t, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.35, delay: i * 0.05 }}
             >
               <NotionBlock className="bg-card/30 border border-border/50">
                 <p className="text-sm text-notion-gray leading-relaxed">“{t.quote}”</p>
@@ -308,10 +308,10 @@ const Index = () => {
                   {t.author} · <span className="text-notion-gray">{t.role}</span>
                 </div>
               </NotionBlock>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </AnimatedSection> */}
+      </AnimatedSection>
 
       {/* Contact */}
       <AnimatedSection delay={0.6} className="max-w-4xl mx-auto px-6 pb-20">

@@ -3,14 +3,13 @@ import { cn } from "@/lib/utils";
 type NavItem = { id: string; label: string; emoji: string };
 
 const navItems: NavItem[] = [
-  { id: "home", label: "Home", emoji: "🏠" },
   { id: "about", label: "About", emoji: "🧭" },
+  { id: "skills", label: "Skills", emoji: "🧰" },
   { id: "projects", label: "Projects", emoji: "🛠️" },
   { id: "experience", label: "Experience", emoji: "🎓" },
   { id: "certifications", label: "Certs", emoji: "💰" },
   { id: "blog", label: "Blog", emoji: "📝" },
-//   { id: "testimonials", label: "Testimonials", emoji: "💬" },
-  { id: "contact", label: "Contact", emoji: "🚀" },
+  { id: "testimonials", label: "Testimonials", emoji: "💬" }
 ];
 
 function scrollToId(id: string) {

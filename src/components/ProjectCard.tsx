@@ -7,9 +7,10 @@ interface ProjectCardProps {
   github?: string;
   video?: string;
   type: 'github' | 'article' | 'video';
+  skills?: string[];
 }
 
-export const ProjectCard = ({ title, description, link, github, video, type }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, link, github, video, type, skills = [] }: ProjectCardProps) => {
   const getIcon = () => {
     switch (type) {
       case 'github':
@@ -45,6 +46,15 @@ export const ProjectCard = ({ title, description, link, github, video, type }: P
           {getIcon()}
         </div>
       </div>
+      {skills.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {skills.map((s) => (
+            <span key={s} className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/5 text-foreground/80 border border-white/10">
+              {s}
+            </span>
+          ))}
+        </div>
+      )}
   </div>
   );
 };

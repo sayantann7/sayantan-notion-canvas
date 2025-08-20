@@ -14,17 +14,17 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <FloatingSideNav />
-        <div className="md:hidden fixed inset-x-0 bottom-2 z-30 px-2 pb-[env(safe-area-inset-bottom)]">
-          <MobileTopBar />
-        </div>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+  <BrowserRouter>
+          <FloatingSideNav />
+          <div className="md:hidden fixed inset-x-0 bottom-2 z-30 px-2 pb-[env(safe-area-inset-bottom)] flex justify-center">
+            <MobileTopBar />
+          </div>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+  </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

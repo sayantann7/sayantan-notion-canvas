@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { ExternalLink, Github, Video } from 'lucide-react';
 
 interface ProjectCardProps {
@@ -29,13 +28,8 @@ export const ProjectCard = ({ title, description, link, github, video, type }: P
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
-      whileHover={{ backgroundColor: 'hsl(var(--notion-hover))' }}
-      className="group rounded-lg p-4 transition-all duration-150 cursor-pointer border border-transparent hover:border-border"
+    <div
+      className="group rounded-lg p-4 transition-all duration-150 cursor-pointer border border-transparent hover:border-border hover:bg-[hsl(var(--notion-hover))]"
       onClick={() => getLink() && window.open(getLink(), '_blank')}
     >
       <div className="flex items-start justify-between">
@@ -51,6 +45,6 @@ export const ProjectCard = ({ title, description, link, github, video, type }: P
           {getIcon()}
         </div>
       </div>
-    </motion.div>
+  </div>
   );
 };

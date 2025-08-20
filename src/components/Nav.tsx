@@ -51,12 +51,12 @@ export function MobileTopBar({ className }: { className?: string }) {
   return (
     <nav
       className={cn(
-        "md:hidden mx-2 bg-white/5 border bg-background rounded-2xl shadow-lg backdrop-blur-xl px-2 py-2",
+        "md:hidden max-w-[min(700px,calc(100vw-1rem))] w-full mx-auto bg-white/5 border bg-background rounded-2xl shadow-lg backdrop-blur-xl px-2 py-2",
         className
       )}
       aria-label="Section navigation"
     >
-      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+      <div className="flex items-center justify-between gap-2">
     {navItems.map((item) => (
           <a
             key={item.id}
@@ -65,7 +65,7 @@ export function MobileTopBar({ className }: { className?: string }) {
               e.preventDefault();
               scrollToId(item.id);
             }}
-      className="shrink-0 w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shadow-md hover:bg-white/20 transition-colors"
+      className="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shadow-md hover:bg-white/20 transition-colors"
       aria-label={item.label}
           >
             <span className="text-lg leading-none select-none">{item.emoji}</span>

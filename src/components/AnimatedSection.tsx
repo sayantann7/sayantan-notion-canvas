@@ -1,22 +1,11 @@
-import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
-  delay?: number;
+  delay?: number; // ignored now; kept for API compatibility
 }
 
-export const AnimatedSection = ({ children, className = '', delay = 0 }: AnimatedSectionProps) => {
-  return (
-    <motion.div
-  initial={{ opacity: 0, y: 16 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: false, amount: 0.2 }}
-  transition={{ duration: 0.5, delay, ease: "easeOut" }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
+export const AnimatedSection = ({ children, className = '' }: AnimatedSectionProps) => {
+  return <div className={className}>{children}</div>;
 };

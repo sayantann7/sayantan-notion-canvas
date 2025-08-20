@@ -103,8 +103,7 @@ const Index = () => {
       <AnimatedSection className="max-w-4xl mx-auto px-6 pt-20 pb-section">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h1 className="text-5xl font-bold text-foreground mb-4 leading-tight">
@@ -117,10 +116,8 @@ const Index = () => {
             I build and scale production-grade websites over the weekend, AI-native apps, train intelligent agents, and create stuff that can grow humanity more than the universe.
           </p>
           
-          <div className="flex gap-4">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+          <div className="flex flex-wrap gap-3 sm:gap-4">
+            <a
               href="https://linkedin.com/in/sayantann7"
               target="_blank"
               rel="noopener noreferrer"
@@ -128,10 +125,8 @@ const Index = () => {
             >
               <Linkedin className="w-4 h-4" />
               LinkedIn
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </a>
+            <a
               href="https://github.com/sayantann7"
               target="_blank"
               rel="noopener noreferrer"
@@ -139,10 +134,8 @@ const Index = () => {
             >
               <Github className="w-4 h-4" />
               GitHub
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </a>
+            <a
               href="https://youtube.com/@sayantann7"
               target="_blank"
               rel="noopener noreferrer"
@@ -150,10 +143,8 @@ const Index = () => {
             >
               <Youtube className="w-4 h-4" />
               YouTube
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </a>
+            <a
               href="https://twitter.com/sayantann7"
               target="_blank"
               rel="noopener noreferrer"
@@ -161,17 +152,15 @@ const Index = () => {
             >
               <Twitter className="w-4 h-4" />
               Twitter
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </a>
+            <a
               href="/sayantan-nandi-resume.pdf"
               download
               className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
             >
               <Download className="w-4 h-4" />
               Download Resume
-            </motion.a>
+            </a>
           </div>
         </motion.div>
       </AnimatedSection>
@@ -192,17 +181,10 @@ const Index = () => {
         <div id="projects" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Projects 🛠️</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.45, delay: index * 0.06 }}
-      className="h-full"
-            >
+          {projects.map((project) => (
+            <div key={project.title} className="h-full">
               <ProjectCard {...project} />
-            </motion.div>
+            </div>
           ))}
         </div>
       </AnimatedSection>
@@ -264,16 +246,10 @@ const Index = () => {
         <div id="blog" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Blog 📝</h2>
         <div className="space-y-2">
-          {blogPosts.map((post, index) => (
-            <motion.div
-              key={post.title}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
-            >
+          {blogPosts.map((post) => (
+            <div key={post.title}>
               <ProjectCard {...post} />
-            </motion.div>
+            </div>
           ))}
         </div>
       </AnimatedSection>
@@ -343,18 +319,14 @@ const Index = () => {
         <h2 className="text-3xl font-bold text-foreground mb-8">Contact 🚀</h2>
         <NotionBlock>
           <div className="flex flex-col sm:flex-row gap-4">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <a
               href="mailto:sayantannandi13@gmail.com"
               className="flex items-center gap-2 px-4 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
             >
               <Mail className="w-4 h-4" />
               sayantannandi13@gmail.com
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </a>
+            <a
               href="https://linkedin.com/in/sayantann7"
               target="_blank"
               rel="noopener noreferrer"
@@ -362,7 +334,7 @@ const Index = () => {
             >
               <Linkedin className="w-4 h-4" />
               Connect on LinkedIn
-            </motion.a>
+            </a>
           </div>
         </NotionBlock>
       </AnimatedSection>

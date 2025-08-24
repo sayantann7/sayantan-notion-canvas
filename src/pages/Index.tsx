@@ -265,6 +265,7 @@ const Index = () => {
         <div id="certifications" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Certifications 💰</h2>
           <div className="flex flex-wrap gap-4">
+            <CertificationPill name="Machine Learning A-Z" provider="Udemy" />
           <CertificationPill name="AI Engineer Path" provider="Scrimba" />
           <CertificationPill name="TensorFlow on Google Cloud" provider="Google" />
           <CertificationPill name="AI A-Z: Agentic AI, Gen AI, RL" provider="Udemy" />

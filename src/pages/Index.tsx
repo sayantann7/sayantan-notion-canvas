@@ -176,7 +176,8 @@ const Index = () => {
               Twitter
             </a>
             <a
-              href="/sayantan-nandi-resume.pdf"
+              href="https://docs.google.com/document/d/1uT_cJUJMcZXpJ9US2pmh-GGeoyIuB37yNobCKucjL9g/edit?usp=sharing"
+              target="_blank"
               download
               className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
             >

@@ -10,113 +10,110 @@ import { SkillPill } from '@/components/SkillPill';
 const Index = () => {
   const projects = [
     {
-      title: "AI Document Chat App (LLM + RAG Prototype)",
+      title: " Complete CI/CD pipeline for a fullstack app",
       description: "Built an intelligent document chat system using Large Language Models and Retrieval-Augmented Generation to enable natural language queries over document collections.",
       type: "github" as const,
-      github: "https://github.com/sayantann7/gpt-oss-ai-document-chat",
-      skills: ["TypeScript", "React", "Node.js", "HuggingFace.js", "LLM", "RAG", "Vector DB"]
+      github: "https://github.com/sayantann7/devops-project-yt",
+      demo: "https://www.linkedin.com/posts/sayantann7_presenting-my-mega-devops-project-of-building-activity-7416216041858510848-mPxe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEx9O6ABj5xeN9ftqMBBPZKtYeNvtqQrXME", // Placeholder demo link
+      skills: ["Jenkins", "Kubernetes", "Docker", "AWS EKS", "AWS EC2", "Prometheus", "Grafana", "Trivy", "SonarQube", "OWASP", "ArgoCD"]
+    },
+    {
+      title: "ZipHub - A Vercel clone",
+      description: "Built a clone of Vercel's platform, enabling seamless deployment and hosting of web applications with a focus on simplicity with deployment in just a single GitHub repo link.",
+      type: "github" as const,
+      github: "https://github.com/sayantann7/vercel-clone",
+      demo: "https://www.linkedin.com/posts/sayantann7_introducing-ziphub-your-very-own-vercel-activity-7327866058168573953-iLv5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEx9O6ABj5xeN9ftqMBBPZKtYeNvtqQrXME", // Placeholder demo link
+      skills: ["Cloudfare R2", "VM", "Redis", "TypeScript", "Next.js", "Tailwind CSS"]
     },
     {
       title: "Prepr – AI Interview Platform",
       description: "Developed an AI-powered interview platform that conducts realistic technical interviews and provides detailed feedback to help candidates improve their skills.",
       type: "github" as const,
       github: "https://github.com/sayantann7/prepr",
+      demo: "https://www.linkedin.com/posts/sayantann7_introducing-to-you-prepr-the-ultimate-activity-7310982183089786880-aBXD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEx9O6ABj5xeN9ftqMBBPZKtYeNvtqQrXME", // Placeholder demo link
       skills: ["TypeScript", "Next.js", "React", "Node.js", "PostgreSQL","Vapi AI"]
     },
     {
-      title: "Tensor Protocol Newsletter",
-      description: "Created a technical newsletter with 5,300+ subscribers covering the latest developments in AI/ML.",
+      title: "Multimodal Sentiment Analysis",
+      description: "Multimodal Sentiment Analysis through Video, Audio & Transcript of Clips (PyTorch, AWS SageMaker, Transformers, BERT Model, CNN) trained on 13,000+ dialogues.",
       type: "github" as const,
-      link: "https://github.com/sayantann7/exclusive-list-launchpad",
-      skills: ["TypeScript", "React", "Supabase"]
-    },
-    {
-      title: "Vercel Clone",
-      description: "Built a clone of Vercel's platform, enabling seamless deployment and hosting of web applications with a focus on simplicity.",
-      type: "github" as const,
-      github: "https://github.com/sayantann7/vercel-clone",
-      skills: ["Cloudfare R2", "VM", "Redis", "TypeScript", "Next.js", "Tailwind CSS"]
-    },
-    {
-      title: "Bolt Clone",
-      description: "Built a clone of Bolt where users can prompt and create websites using natural language.",
-      type: "github" as const,
-      github: "https://github.com/sayantann7/bolt.clone",
-      skills: ["TypeScript", "React", "OpenAI API", "Web Containers", "Tailwind CSS"]
-    },
-    {
-      title: "Student Resources Hub",
-      description: "Compiled a list of 150+ Free AI tools, resources, and guides to help students navigate their academic journey.",
-      type: "github" as const,
-      github: "https://github.com/sayantann7/student-resources",
-      skills: ["TypeScript", "React", "Tailwind CSS"]
-    },
-    {
-      title: "AutoForms",
-      description: "A fun version of filling forms using natural language processing instead of traditional form inputs.",
-      type: "github" as const,
-      github: "https://github.com/sayantann7/autoforms-frontend",
-      skills: ["TypeScript", "React", "OpenAI API", "NLP", "Express"]
-    },
-    {
-      title: "Pacman RL Agent",
-      description: "Implemented a reinforcement learning agent that masters the classic Pacman game using Q-learning and deep neural networks.",
-      type: "github" as const,
-      github: "https://github.com/sayantann7/DCQN_Learning_for_Pac_Man",
-      skills: ["Python", "Tensorflow", "OpenAI Gym", "Reinforcement Learning"]
-    },
-    {
-      title: "Yes Securities Sales Repository",
-      description: "Developed a Android+iOS application for managing the documents of the Yes Securities Sales Team.",
-      type: "github" as const,
-      github: "https://github.com/sayantann7/yes-securities-repo",
-      skills: ["React Native", "Expo", "AWS S3", "TypeScript"]
-    },
-    {
-      title: "Placement Predictor",
-      description: "Built a Random Forest regression model to predict student placement outcomes based on various features.",
-      type: "github" as const,
-      github: "https://github.com/sayantann7/placement-predictor",
+      github: "https://github.com/sayantann7/multimodal-sentiment-analyzer",
+      demo: "https://www.linkedin.com/posts/sayantann7_created-a-multimodal-sentiment-analysis-model-activity-7409249210451120128-fOSQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEx9O6ABj5xeN9ftqMBBPZKtYeNvtqQrXME", // Placeholder demo link
       skills: ["Python", "scikit-learn", "Pandas"]
     },
     {
-      title: "Web3 Wallet",
-      description: "Developed a simple Web3 wallet for managing digital assets and interacting with decentralized applications.",
+      title: "Facial Emotion Detector",
+      description: "Developed a Facial Emotion Detector CNN using PyTorch, TorchVision, OpenCV on a dataset of 50,000+ images",
       type: "github" as const,
-      github: "https://github.com/sayantann7/sage-web3-wallet",
+      github: "https://github.com/sayantann7/emotion-detector-cnn",
+      demo: "https://www.linkedin.com/posts/sayantann7_created-a-facial-emotion-detector-using-pytorch-activity-7387903358281338880-V5Qr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEx9O6ABj5xeN9ftqMBBPZKtYeNvtqQrXME", // Placeholder demo link
       skills: ["TypeScript", "React", "Web3.js", "Solana"]
-    }
+    },
+    {
+      title: "AI Document Chat App (LLM + RAG Prototype)",
+      description: "Built an intelligent document chat system using Large Language Models and RAG to enable natural language queries over documents.",
+      type: "github" as const,
+      github: "https://github.com/sayantann7/gpt-oss-ai-document-chat",
+      demo: "https://linkedin.com/in/sayantann7", // Placeholder demo link
+      skills: ["TypeScript", "React", "Node.js", "HuggingFace.js", "LLM", "RAG", "Vector DB"]
+    },
+    {
+      title: "AutoForms",
+      description: "A fun version of filling forms using Natural Language Processing instead of traditional form inputs.",
+      type: "github" as const,
+      github: "https://github.com/sayantann7/autoforms-lovable.git",
+      demo: "https://autoforms.vercel.app/", // Placeholder demo link
+      skills: ["TypeScript", "React", "OpenAI API", "NLP", "Express"]
+    },
   ];
 
-  const allSkills = [
-    "JavaScript","TypeScript","React","HTML","CSS","Python","Next.js","Node.js","PostgreSQL","MongoDB","Google Cloud","DigitalOcean","Firebase","TensorFlow","Terraform","Prisma","Vercel","Supabase","Figma","Canva","After Effects","Stack Overflow","Postman","Vite","C","Linux"
-  ];
+  const skillCategories = {
+    "AI/ML": ["Transformers", "LangChain", "LangGraph", "RAG pipelines", "AI Agents", "Scikit-Learn", "DL", "NLP"],
+    "Frameworks": ["TensorFlow", "PyTorch", "React", "NextJS", "NodeJS", "Spring Boot"],
+    "Cloud": ["Docker", "Kubernetes", "AWS S3", "Lambda", "EC2", "ELB", "BedRock", "DigitalOcean"],
+    "Databases": ["SQL", "PostgreSQL", "MongoDB", "Pinecone"],
+    "Languages": ["Java", "JavaScript", "Python"],
+    "Tools": ["Git", "Linux/Unix", "Postman/Swagger", "Kafka"]
+  };
 
   const blogPosts = [
     {
-      title: "Exploring GPT OSS (OpenAI's OSS Model)",
-      description: "Deep dive into OpenAI's open-source models, comparing capabilities and exploring practical applications in real-world scenarios.",
+      title: "Understanding Transformers - Heart of all LLMs",
+      description: "Ever wondered how models like ChatGPT, Claude, Gemini, and other Large Language Models actually work? The secret lies in Transformers, the revolutionary architecture introduced by Google in the 2017 paper “Attention Is All You Need”.",
       type: "video" as const,
-      video: "https://youtu.be/QmvlbYnnkuI?si=m2A64p90lIoeGsQx"
+      video: "https://youtu.be/e0J3EY8UETw?si=MAxh28eGQCYcJfEo"
     },
     {
-      title: "AWS Crash Course for Beginners",
-      description: "Comprehensive breakdown of AWS services (EC2, VPC, Security Groups, IAM) and their applications in cloud computing.",
+      title: "Complete DevSecOps + GitOps Pipeline on AWS",
+      description: "In this video, I walk through building a complete real-world DevSecOps + GitOps pipeline from scratch on AWS using Jenkins, Kubernetes, SonarQube & ArgoCD.",
       type: "video" as const,
-      video: "https://youtu.be/1Dcq6dy7hRw?si=uw5sewmnrJOjWTnj"
+      video: "https://www.youtube.com/watch?v=ohCizGoRByA"
+    },
+    {
+      title: "How to build scalable applications using Docker, Kubernetes and ArgoCD",
+      description: "In this article, I share a complete guide to building a complete CI/CD pipeline for a fullstack application using Docker, Kubernetes, and ArgoCD from scratch.",
+      type: "article" as const,
+      link: "https://medium.com/@sayantann7/how-to-build-scalable-applications-using-docker-kubernetes-and-argocd-3a70fde70846"
     },
     {
       title: "Neural Networks: Theory + Practical Guide",
       description: "Complete guide covering neural network fundamentals from mathematical foundations to hands-on implementation tutorials.",
-      type: "article" as const,
-      link: "https://youtu.be/5KbSmguIjEY?si=SB9GYz3pKY04bFx1"
+      type: "video" as const,
+      video: "https://www.youtube.com/watch?v=5KbSmguIjEY"
     },
     {
-      title: "Google's A2A (Agent-to-Agent Protocol) Explained",
-      description: "Comprehensive breakdown of Google's Agent-to-Agent communication protocol and its implications for multi-agent AI systems.",
+      title: "Spring Boot for Beginners",
+      description: "In this video, we build a simple Spring Boot backend application from scratch using REST APIs, MVC architecture, Spring Data JPA, and MySQL.",
       type: "video" as const,
-      video: "https://youtu.be/srvxkAztYVU?si=RO85VObNRcTQyAgQ"
+      video: "https://www.youtube.com/watch?v=GxeKz0WVK4Y"
+    },
+    {
+      title: "AWS Deployment Tutorial for Beginners",
+      description: "In this tutorial, I’ll walk you through the complete process of deploying your project from your local machine → GitHub → AWS EC2 → custom domain with HTTPS.",
+      type: "video" as const,
+      video: "https://youtu.be/42WUT6vFfKU?si=eBlRXc6WcqH1UEvV"
     }
+
   ];
 
   return (
@@ -128,17 +125,18 @@ const Index = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-5xl font-bold text-foreground mb-4 leading-tight">
-            👋 Welcome to Sayantan's Space
-          </h1>
-          <h2 className="text-2xl text-notion-gray mb-6 font-medium">
-            Full Stack Developer | AI Engineer | Cloud Engineer
-          </h2>
-          <p className="text-lg text-notion-gray leading-relaxed mb-8 max-w-3xl">
-            I build and scale production-grade websites over the weekend, AI-native apps, train intelligent agents, and create stuff that can grow humanity more than the universe.
-          </p>
-          
-          <div className="flex flex-wrap gap-3 sm:gap-4">
+          <div className="flex-1">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
+              👋 Welcome to Sayantan's Space
+            </h1>
+            <h2 className="text-xl md:text-2xl text-notion-gray mb-6 font-medium">
+              Full Stack Developer | AI Engineer | Cloud Engineer
+            </h2>
+            <p className="text-base md:text-lg text-notion-gray leading-relaxed mb-8 max-w-3xl">
+              I build and scale production-grade websites over the weekend, AI-native apps, train intelligent agents, and create stuff that can grow humanity more than the universe.
+            </p>
+            
+            <div className="flex flex-wrap gap-3 sm:gap-4">
             <a
               href="https://linkedin.com/in/sayantann7"
               target="_blank"
@@ -176,7 +174,7 @@ const Index = () => {
               Twitter
             </a>
             <a
-              href="https://docs.google.com/document/d/1uT_cJUJMcZXpJ9US2pmh-GGeoyIuB37yNobCKucjL9g/edit?usp=sharing"
+              href="/sayantan-nandi-resume.pdf"
               target="_blank"
               download
               className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-notion-hover transition-colors"
@@ -184,6 +182,7 @@ const Index = () => {
               <Download className="w-4 h-4" />
               Download Resume
             </a>
+          </div>
           </div>
         </motion.div>
       </AnimatedSection>
@@ -193,9 +192,45 @@ const Index = () => {
         <div />
         <h2 className="text-3xl font-bold text-foreground mb-8">About Me 🧭</h2>
         <NotionBlock>
-          <p className="text-foreground leading-relaxed text-lg">
-            A student driven by curiosity and a passion for building solutions that create real-world impact, my core focus lies in full-stack web development, where I enjoy turning ideas into scalable and user-friendly applications. Alongside this, I’m expanding my expertise in AI/ML and exploring the potential of cloud technologies such as AWS and Google Cloud to power modern, intelligent systems.
+          <p className="text-foreground leading-relaxed text-lg mb-8">
+            I’m a builder at heart, passionate about creating technology that solves real problems at scale.
+            <br />
+            <br />
+            I’m particularly interested in the intersection of AI, cloud computing, and distributed systems. From designing AI agents and RAG systems to deploying microservices on cloud platforms, I enjoy turning complex ideas into working systems.
+            <br />
+            <br />
+            Outside of tech, I have a strong interest in filmmaking and cinema. I enjoy exploring storytelling through films, especially Christopher Nolan. I’m also deeply inspired by Elon Musk, his biography had a big impact on me when I was 14, shaping the way I think about ambition, innovation, and building at scale.
+            <br />
+            <br />
+            Right now, I’m focused on building impactful products, learning more and continuously pushing myself toward becoming 1% better every day.
           </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8 auto-rows-[120px] md:auto-rows-[140px]">
+            {/* Image 2: Landscape (1280x720) - Top Left (Spans 2 cols, 1 row) */}
+            <div className="col-span-2 row-span-1 rounded-xl overflow-hidden shadow-sm group">
+              <img src="/myphotos/2.jpeg" alt="Activities/Hackathon" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+
+            {/* Image 3: Portrait (854x1280) - Middle (Spans 1 col, 2 rows) */}
+            <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-sm group">
+              <img src="/myphotos/3.jpeg" alt="More of my life" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+
+            {/* Image 5: Portrait (864x1194) - Middle Right (Spans 1 col, 2 rows) */}
+            <div className="col-span-1 row-span-2 rounded-xl overflow-hidden shadow-sm group">
+              <img src="/myphotos/5.jpeg" alt="Speaking Event" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            
+            {/* Image 6: Portrait (581x1079) - Far Right (Spans 2 cols on mobile, 1 col on desktop, 2 rows) */}
+            <div className="col-span-2 md:col-span-1 row-span-2 rounded-xl overflow-hidden shadow-sm group">
+              <img src="/myphotos/6.jpeg" alt="Memories" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+            </div>
+
+            {/* Image 4: Landscape (1280x720) - Bottom Left (Spans 2 cols, 1 row) */}
+            <div className="col-span-2 row-span-1 rounded-xl overflow-hidden shadow-sm group">
+              <img src="/myphotos/4.jpeg" alt="Friends and Network" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+          </div>
         </NotionBlock>
       </AnimatedSection>
 
@@ -203,9 +238,16 @@ const Index = () => {
       <AnimatedSection id="skills" className="max-w-4xl mx-auto px-6 pb-section">
         <div />
         <h2 className="text-3xl font-bold text-foreground mb-8">Skills 🧰</h2>
-        <div className="flex flex-wrap gap-2">
-          {allSkills.map((skill) => (
-            <SkillPill key={skill} name={skill} />
+        <div className="space-y-6">
+          {Object.entries(skillCategories).map(([category, skills]) => (
+            <div key={category}>
+              <h3 className="text-lg font-medium text-foreground mb-3">{category}</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <SkillPill key={skill} name={skill} />
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </AnimatedSection>
@@ -227,11 +269,26 @@ const Index = () => {
       <AnimatedSection delay={0.3} className="max-w-4xl mx-auto px-6 pb-section">
         <div id="experience" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Experience 🎓</h2>
-        <div className="space-y-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <TimelineItem
+              title="AI Engineer"
+              company="AIVAS"
+              period="Jan 2026 - Mar 2026"
+            />
+            <TimelineItem
+              title="App Developer"
+              company="Yes Bank"
+              period="June 2025 - Sep 2025"
+            />
           <TimelineItem
             title="Full Stack Developer"
             company="Pluto Labs"
-            period="Jun 2025 – Present"
+            period="Sep 2025 - Dec 2025"
+          />
+          <TimelineItem
+            title="Full Stack Developer"
+            company="NexVest"
+            period="Aug 2025 - Nov 2025"
           />
           <TimelineItem
             title="Technical Executive"
@@ -249,11 +306,6 @@ const Index = () => {
             period="Jul 2025 – Present"
           />
           <TimelineItem
-            title="Full Stack Developer"
-            company="NexVest"
-            period="Apr 2025 – Jun 2025"
-          />
-          <TimelineItem
             title="B.Tech Computer Science & Engineering"
             company="Symbiosis Institute of Technology, Pune"
             period="2024 – 2028"
@@ -265,14 +317,14 @@ const Index = () => {
       <AnimatedSection delay={0.4} className="max-w-4xl mx-auto px-6 pb-section">
         <div id="certifications" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Certifications 💰</h2>
-          <div className="flex flex-wrap gap-4">
-            <CertificationPill name="Machine Learning A-Z" provider="Udemy" />
-          <CertificationPill name="AI Engineer Path" provider="Scrimba" />
-          <CertificationPill name="TensorFlow on Google Cloud" provider="Google" />
-          <CertificationPill name="AI A-Z: Agentic AI, Gen AI, RL" provider="Udemy" />
-          <CertificationPill name="Hashgraph Developer Course" provider="Hashgraph Association" />
-          <CertificationPill name="AWS APAC Solutions Architect Job Silumation" provider="AWS" />
-          <CertificationPill name="Introduction to MCP" provider="Anthropic" />
+        <div className="flex flex-wrap gap-4">
+          <CertificationPill name="Generative AI Course with LangChain and HuggingFace" provider="Udemy (Oct 2025)" />
+          <CertificationPill name="Oracle Cloud Infrastructure 2025 Certified Generative AI Professional" provider="Oracle (Sep 2025)" />
+          <CertificationPill name="Machine Learning A-Z" provider="Udemy (Aug 2025)" />
+          <CertificationPill name="AI Engineer Path" provider="Scrimba (Jul 2025)" />
+          <CertificationPill name="Classify Images with TensorFlow on Google Cloud" provider="Google (Apr 2025)" />
+          <CertificationPill name="Artificial Intelligence A-Z: Agentic AI, Gen AI, RL" provider="Udemy (Mar 2025)" />
+          <CertificationPill name="Introduction to Model Context Protocol" provider="Anthropic (Aug 2025)" />
         </div>
       </AnimatedSection>
 

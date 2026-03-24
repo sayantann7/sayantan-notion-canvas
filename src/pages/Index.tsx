@@ -352,6 +352,11 @@ const Index = () => {
               author: "Yashwant Sagnati",
               role: "Founder, NexVest",
             },
+            {
+              quote:"What impressed me most was Sayantan's work ethic and diligence. Working as a freelance engineer on a small startup team, he delivered reliably with minimal supervision and showed genuine ownership over his work. He was thorough, consistent, and proactive in identifying and solving problems. I would gladly recommend Sayantan for roles in AI/ML engineering, computer vision, or audio and speech processing. He would be a solid addition to any team working on real-world AI systems.",
+              author: "JP",
+              role: "CEO & Founder, AIVAS Pte. Ltd.",
+            },
           ].map((t, i) => (
             <div
               key={i}

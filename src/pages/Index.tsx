@@ -10,7 +10,15 @@ import { SkillPill } from '@/components/SkillPill';
 const Index = () => {
   const projects = [
     {
-      title: " Complete CI/CD pipeline for a fullstack app",
+      title: "Kinesis - Cursor for Product Management",
+      description: "Kinesis is an AI native product ideation and requirements platform that turns raw ideas into executable specs. Capture voice notes or text, generate PRDs with AI, and seamlessly deliver context to coding tools like Cursor via a built in MCP server.",
+      type: "github" as const,
+      github: "https://github.com/sayantann7/kinesis",
+      demo: "https://www.linkedin.com/posts/sayantann7_i-built-the-tool-i-always-wished-existed-activity-7445196696021626881-TrtU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEx9O6ABj5xeN9ftqMBBPZKtYeNvtqQrXME", // Placeholder demo link
+      skills: ["Python", "Node.js", "Yarn", "AWS EKS", "AWS EC2", "MongoDB", "Docker"]
+    },
+    {
+      title: "Complete CI/CD pipeline for a fullstack app",
       description: "Built an intelligent document chat system using Large Language Models and Retrieval-Augmented Generation to enable natural language queries over document collections.",
       type: "github" as const,
       github: "https://github.com/sayantann7/devops-project-yt",
@@ -318,7 +326,9 @@ const Index = () => {
         <div id="certifications" />
         <h2 className="text-3xl font-bold text-foreground mb-8">Certifications 💰</h2>
         <div className="flex flex-wrap gap-4">
+          <CertificationPill name="Supervised Machine Learning: Regression and Classification" provider="DeepLearning.AI (Apr 2026)" />
           <CertificationPill name="Generative AI Course with LangChain and HuggingFace" provider="Udemy (Oct 2025)" />
+          <CertificationPill name="Complete MLOps Bootcamp" provider="Udemy (Apr 2026)" />
           <CertificationPill name="Oracle Cloud Infrastructure 2025 Certified Generative AI Professional" provider="Oracle (Sep 2025)" />
           <CertificationPill name="Machine Learning A-Z" provider="Udemy (Aug 2025)" />
           <CertificationPill name="AI Engineer Path" provider="Scrimba (Jul 2025)" />
